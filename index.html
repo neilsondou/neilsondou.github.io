@@ -1,191 +1,185 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Neilson Dou</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            color: #333;
         }
 
         header {
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            margin-bottom: 20px;
+            background: #f8f8f8;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
-        .profile-pic {
-            border-radius: 100%;
-            border: rgb(0, 0, 0)solid;
-            width: 150px;
-            height: 150px;
-            margin: 20px auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .about {
-            margin-bottom: 20px;
-        }
-
-        .skills {
-            margin-bottom: 20px;
-        }
-
-        .skills ul {
-            list-style-type: none;
+        nav ul {
+            list-style: none;
             padding: 0;
-        }
-
-        .contact {
+            margin: 0;
             text-align: center;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #hero {
+            background: #007BFF;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        #hero img {
+            border-radius: ;
+            width: 150px;
+            height: 250px;
+            margin-top: 20px;
+        }
+
+        #about,
+        #projects,
+        #blog,
+        #contact {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .project-list,
+        .blog-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-item,
+        .blog-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #f8f8f8;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Neilson Dou</h1>
-        </header>
-        <img src="./me.png" alt="Neilson Dou" class="profile-pic">
-        <div class="about">
-            <h2>About Me</h2>
-            <p>A programming enthusiast with five years of development experience as a full stack engineer,has certain
-                Python programming skills and development experience in areas such as deep learning.</p>
-            <p>Previously led or participated in the development of large-scale projects, now maintaining a public
-                welfare online library,leading the development of a rhythm game,I have some experience in game
-                development and am proficient in using game
-                engines such as Unity, UE, Godot and so on.</p>
-            <p>Having some hardware development experience, assisting in the development of technical prototypes for
-                commercial projects, verifying principles, and successfully industrializing them.</p>
-            <p>I am a political scholar and have authored works such as "The Origins of Nations on a Global Scale", "Liu
-                Xihong", "Debate on the Democratic Transformation of Modern China", "A Brief Reading of Hayek: The
-                Arrogance of Rational Construction",
-                and translated works such as "The Road to Serbia" and "Critical Citizens: Global Support for Democratic
-                Government",and founded "Democratic House Online"
-            </p>
-            <p>I am committed to achieving public ownership of technology, that is, open source, and promoting political
-                democratization through possible means and forces.</p>
-        </div>
-        <div class="skills">
-            <h2>Some of my works</h2>
+    <header>
+        <nav>
             <ul>
-                <strong>The Origins of Nations on a Global Scale</strong>
-                <li>&nbsp;</li>
-                <li>Whenever we start to think about the origin of a certain system, we will involuntarily bring up
+                <li><a href='#about'>About</a></li>
+                <li><a href='#projects'>Projects</a></li>
+                <li><a href='#blog'>Blog</a></li>
+                <li><a href='#contact'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id='hero'>
+        <div class='hero-content'>
+            <h1>Neilson Dou</h1>
+            <p>Software engineer, political scientist</p>
+            <img src='avatar.png' alt='Your Name'>
+        </div>
+    </section>
+
+    <section id='about'>
+        <h2>About Me</h2>
+        <p>A software engineer with five years of experience in full stack engineering development, possessing certain
+            Python programming skills and development experience in fields such as deep learning. Previously led or
+            participated in the development
+            of multiple projects, now maintaining a non-profit online library and leading the development of multiple
+            computer games.</p>
+        <p>I am a political scholar and have authored works such as 'The Origins of Nations on a Global Scale', 'Debate
+            on the Democratic Transformation of Modern China', 'The Arrogance of Rational Construction', and translated
+            works such as 'The Road to
+            Serfdom' and 'Critical Citizens: Global Support for Democratic Government'
+        </p>
+        <p>Established and maintained a Chinese political science library ( plcn.xyz )
+        </p>
+    </section>
+
+    <section id='projects'>
+        <h2>Projects</h2>
+        <div class='project-list'>
+            <div class='project-item'>
+                <h3><a href='https://PLCN.xyz'>PLCN.xyz</a></h3>
+                <p>Freedom of knowledge</p>
+            </div>
+            <div class='project-item'>
+                <h3>Longcrypt</h3>
+                <p>A file encryption software</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id='blog'>
+        <h2>Blog</h2>
+        <div class='blog-list'>
+            <div class='blog-item'>
+                <h3>The Origins of Nations on a Global Scale</h3>
+                <p>Whenever we start to think about the origin of a certain system, we will involuntarily bring up
                     geographical determinism, cultural determinism, and even racial determinism, and believe that a
                     certain political system and political habit
                     must be influenced by external forces or due to certain traditional habits during the historical
                     development process. Under this influence, a system with significant characteristics is extracted
                     from the entire nation or political
-                    body through long-term evolution. From the perspective of future generations, this extracted system
-                    can be used as a summary of a certain national historical stage, and can even be used as a summary
-                    of the national character and its
-                    historical origins. Undoubtedly, it is extremely important and worthy of in-depth study. The study
-                    of the origins of systems can not only enhance our understanding of the history of a certain nation
-                    or country after its system has
-                    been fully constructed, but also allow us to understand the origins of its nationality and national
-                    character, and to understand the different trends of national history in different geographical and
-                    cultural environments. It can also
-                    be used to explain how the inherent contradictions between various ethnic groups and countries in
-                    today's world arise, and we can use this to think about how to bridge the contradictions between
-                    different ethnic groups that have taken
-                    different paths thousands of years ago, in order to achieve what Kant called "permanent peace".<a
-                        href="https://qiumu.club/119921">Read More...</a></li>
-                <h2>&nbsp;</h2>
-                <strong>Debate on the Democratic Transformation of Modern China</strong>
-                <li>&nbsp;</li>
-
-                <li>Modern democracy, or the democratic theory we are discussing, is not in line with the classical
+                    body through long-term evolution...</p>
+                <a href='https://doutianyang.me/119921'>Read More</a>
+            </div>
+            <div class='blog-item'>
+                <h3>Debate on the Democratic Transformation of Modern China</h3>
+                <p>Modern democracy, or the democratic theory we are discussing, is not in line with the classical
                     democracy of the Athenian city-state, nor is it homogeneous with the ideas produced under various
                     declarations and movements. Therefore, we
                     always have some misunderstandings about the term democracy and the actual essence of this ancient
                     system, which is the spirit of democracy. If the term democracy is placed under ideological
-                    rhetoric, then this concept often departs
-                    from actual institutional arrangements and is simply used as a means of propaganda to flaunt and
-                    conceal one's weaknesses in institutional arrangements, or simply exists as a rhetoric. If democracy
-                    is placed under what we call Western
-                    rhetoric, we will always subconsciously associate it with parliamentary systems, electoral systems,
-                    and elite politics. This phenomenon is not puzzling, as in reality, the democratic system of modern
-                    Western countries is a system constructed
-                    with parliamentary and electoral systems as its core. This system actually emphasizes a kind of
-                    political "procedural justice", whose essence is to legitimize the exercise of public power,
-                    preserve the existence of the system, prevent
-                    the system from being destroyed by speculators and ambitious individuals, eliminate the natural
-                    contradictions between various interest groups and people with different political tendencies in
-                    society to the greatest extent possible,
-                    and transfer the game to the political stage. In the theory of social contract, there is a saying
-                    that each of us, together with all our forces, is placed under the highest guidance of public will,
-                    and we accept each member as an inseparable
-                    part of the whole in the community. Therefore, whether viewed from the democratic system of ancient
-                    Greece or the modern electoral system, the commonality that exists in different systems is the
-                    paradigm of democracy, which is what
-                    Rousseau meant by the guidance of public will, that is, the generation and exercise of public power.
-                    Whether this process is legal and recognized by the participants of democratic politics is a single
-                    indicator for judging whether
-                    a political entity is democratic. Correspondingly, this paradigm reflects the spirit of democracy,
-                    and the continuous development of democratic theory aims to achieve true legalization of public
-                    power through various systems under
-                    different frameworks. The goal of constructing a democratic system is to achieve the pursuit of
-                    liberalism under a gradually improving system.<a href="https://qiumu.club/121278">Read More...</a>
-                </li>
-
-            </ul>
+                    rhetoric...
+                </p>
+                <a href='https://doutianyang.me/119980'>Read More</a>
+            </div>
+            <!-- Add more blog posts as needed -->
         </div>
-        <div class="skills">
-            <h2>Projects I have led</h2>
-            <ul>
-                <li>Doudou Online Library</li>
-                <li>Qingfeng Wiki</li>
-                <li>Democratic House Online</li>
-                <li>Era2 VPN</li>
-                <li>loncrypt</li>
-                <li>Mdchat</li>
-                <li>Meditator-AI</li>
-                <li>Nimble Fingers/Nimble Fingers 2/Nimble Fingers 3/Nimble Fingers X</li>
-                <li>PlayGo</li>
+    </section>
 
-            </ul>
-        </div>
-        <div class="contact">
-            <h2>Contact me</h2>
-            <p>Email: <a href="mailto:doutianyang@163.com">doutianyang@163.com</a>&nbsp;&nbsp;<a
-                    href="mailto:neilsondou@outlook.com">neilsondou@outlook.com</a></p>
-            <p>GitHub: <a href="https://github.com/neilsondou" target="_blank">@neilsondou</a> Gitee: <a
-                    href="https://gitee.com/qiumuu" target="_blank">@豆豆</a> 知乎: <a
-                    href="https://www.zhihu.com/people/qiumuu" target="_blank">@老窦</a>
-            </p>
+    <section id='contact'>
+        <h2>Contact</h2>
+        <p><a href="mailto:neilsondou@outlook.com">neilsondou@outlook.com</a> <a
+                href="https://www.zhihu.com/people/qiumuu" target="_blank">@老窦</a></p>
+    </section>
 
-        </div>
-    </div>
-    <script>
-        console.log('你好');
-    </script>
+    <footer>
+        <p>&copy; 2023 No rights reserved.</p>
+    </footer>
 </body>
 
 </html>
